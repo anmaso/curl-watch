@@ -1,4 +1,7 @@
-const URL = process.argv[2];
+let URL = process.argv[2];
+if (!URL.startsWith('http') ) {
+    URL = 'http://' + URL;
+}
 
 const timeDiff = (t2, t1) => Math.floor((t2 - t1) / 1000);
 
